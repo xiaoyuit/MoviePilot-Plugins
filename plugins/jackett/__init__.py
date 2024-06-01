@@ -186,7 +186,7 @@ class Jackett(_PluginBase):
                             # "date_added": {"selector": "td:nth-child(5)"},
                             "size": {"selector": "size"},
                             "seeders": {
-                                "selector": 'torznab:attr[name="seeders"]',
+                                "selector": "torznab:attr[name='seeders']",
                                 "attribute": "value",
                             },
                             # "leechers": {"selector": "td:nth-child(7)"},
