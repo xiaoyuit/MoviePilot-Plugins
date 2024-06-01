@@ -197,6 +197,8 @@ class Jackett(_PluginBase):
                     },
                 }
                 # )
+                logger.info(ret)
+                logger.info(ret.json())
                 for v in ret.json()
             ]
             return indexers
