@@ -21,7 +21,7 @@ class Jackett(_PluginBase):
     # 插件描述
     plugin_desc = "支持检索 Jackett 站点资源"
     # 插件图标
-    plugin_icon = "https://raw.githubusercontent.com/so1ve/MoviePilot-Plugins/main/icons/jackett.png"
+    plugin_icon = "https://raw.githubusercontent.com/xiaoyuit/MoviePilot-Plugins/dev/icons/jackett.png"
     # 主题色
     plugin_color = "#000000"
     # 插件版本
@@ -29,7 +29,7 @@ class Jackett(_PluginBase):
     # 插件作者
     plugin_author = "Ray"
     # 作者主页
-    author_url = "https://github.com/so1ve"
+    author_url = "https://github.com/xiaoyuit"
     # 插件配置项ID前缀
     plugin_config_prefix = "jackett_"
     # 加载顺序
