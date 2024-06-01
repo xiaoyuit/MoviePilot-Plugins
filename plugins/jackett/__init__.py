@@ -112,8 +112,9 @@ class Jackett(_PluginBase):
             return False
         self._sites = self.get_indexers()
         for site in self._sites:
-            logger.info((site["domain"], site))
-            self._sites_helper.add_indexer(site["domain"], site)
+            domain = site["domain"].split('//')[-1]
+            logger.info((domain, site))
+            self._sites_helper.add_indexer(domain, site)
         return True if isinstance(self._sites, list) and len(self._sites) > 0 else False
 
     def get_indexers(self):
@@ -154,6 +155,7 @@ class Jackett(_PluginBase):
                 {
                     "id": f'{v["id"]}-jackett',
                     "name": f'{v["name"]} (Jackett)',
+                    "site_link": f'{v["site_link"]}',
                     "domain": f'{self._host}/api/v2.0/indexers/{v["id"]}/results/torznab/',
                     "public": True if v["type"] == "public" else False,
                     "proxy": True,
@@ -162,7 +164,7 @@ class Jackett(_PluginBase):
                     "search": {
                         "paths": [
                             {
-                                "path": f"?apikey={self._api_key}&t=search&q={{keyword}}",
+                                "path": f"api?apikey={self._api_key}&t=search&q={{keyword}}",
                                 "method": "get",
                             }
                         ]
