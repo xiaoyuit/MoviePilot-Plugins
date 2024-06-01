@@ -25,7 +25,7 @@ class Jackett(_PluginBase):
     # 主题色
     plugin_color = "#000000"
     # 插件版本
-    plugin_version = "0.0.14"
+    plugin_version = "0.0.15"
     # 插件作者
     plugin_author = "Ray"
     # 作者主页
